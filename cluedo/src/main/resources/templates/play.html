@@ -14,19 +14,57 @@
         <tr>
             <th scope="col">Name</th>
             <th scope="col">Form Of Address</th>
+            <th scope="col">Feature</th>
+            <th scope="col">Age</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="person : ${persons} ">
             <td th:text="${person.name}"></td>
             <td th:text="${person.anrede}"></td>
+            <td th:text="${person.merkmal}"></td>
+            <td th:text="${person.alter}"></td>
         </tr>
         </tbody>
     </table>
     <h1>Weapons List</h1>
-    <p>To do</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Length</th>
+            <th scope="col">Material</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="weapon : ${weapons} ">
+            <td th:text="${weapon.name}"></td>
+            <td th:text="${weapon.typ}"></td>
+            <td th:text="${weapon.laenge}"></td>
+            <td th:text="${weapon.material}"></td>
+        </tr>
+        </tbody>
+    </table>
     <h1>Rooms List</h1>
-    <p>To do</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Length</th>
+            <th scope="col">Material</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="weapon : ${weapons} ">
+            <td th:text="${weapon.name}"></td>
+            <td th:text="${weapon.typ}"></td>
+            <td th:text="${weapon.laenge}"></td>
+            <td th:text="${weapon.material}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>

@@ -1,23 +1,21 @@
 package ch.bbw.cluedo.controller;
 
-import ch.bbw.cluedo.models.Person;
+import ch.bbw.cluedo.models.DataService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Controller
 public class CluedoController {
 
-    List<Person> personList = new ArrayList<>();
+    @Autowired
+    DataService dataService;
 
     @GetMapping("/")
     public String getPersonModel(Model model){
-        personList.add(new Person("Mustard", "Colonel", "Schnauz", 65,"Colonel"));
-        personList.add(new Person("Scarlett", "Miss", "rotes Kleid", 45,""));
-        model.addAttribute("persons", personList);
+        model.addAttribute("persons", dataService.getPersons());
+        model.addAttribute("weapons", dataService.getWeapons());
         return ("play");
     }
 }
