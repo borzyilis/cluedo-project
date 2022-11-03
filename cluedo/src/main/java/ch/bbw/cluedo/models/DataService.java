@@ -26,7 +26,7 @@ public class DataService {
             new Room("Wintergarten",30, 1, 5, "blau", "Karo"),
             new Room("Wohnzimmer",30, 1, 5, "blau", "Karo")
     );
-
+    
     public List<Person> getPersons() {
         return persons;
     }
