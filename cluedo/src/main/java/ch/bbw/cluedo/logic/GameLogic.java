@@ -12,11 +12,13 @@ public class GameLogic {
 
     public void setupNewGame(DataService service, Crime secret) {
 
+        //Generate random offenders
         Random randomNumber = new Random();
         secret.setActor(randomNumber.nextInt(1, service.getPersons().toArray().length) - 1);
         secret.setWeapon(randomNumber.nextInt(1, service.getWeapons().toArray().length) - 1);
         secret.setScene(randomNumber.nextInt(1, service.getRooms().toArray().length) - 1);
 
+        //get the objects from the random generated indexes
         this.crimePerson = service.getPersons().get(secret.getActor());
         this.crimeWeapon = service.getWeapons().get(secret.getWeapon());
         this.crimeRoom = service.getRooms().get(secret.getScene());

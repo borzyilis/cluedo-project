@@ -7,8 +7,21 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
+<form action="#" th:action="@{/}" method="post" th:object="${person}">  
+    <select class="form-control" >
+        <option
+                th:each="person : ${persons}"
+                th:value="${person}"
+                th:text="${person.name}">
+        </option>
+        </select>
+    <button type="submit">Guess</button>
+</form>
 <div th:if="${not #lists.isEmpty(persons)}" class="container">
     <h1>Persons List</h1>
+    <h1 th:text="${crime.actor}"></h1>
+    <h1 th:text="${crime.weapon}"></h1>
+    <h1 th:text="${crime.scene}"></h1>
     <table class="table">
         <thead>
         <tr>
@@ -19,11 +32,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="person : ${persons} ">
+        <tr th:each="person, iterStat : ${persons} ">
             <td th:text="${person.name}"></td>
             <td th:text="${person.anrede}"></td>
             <td th:text="${person.merkmal}"></td>
             <td th:text="${person.alter}"></td>
+            <td th:text="${iterStat}"></td>
         </tr>
         </tbody>
     </table>

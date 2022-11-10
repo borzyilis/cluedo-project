@@ -2,59 +2,67 @@ package ch.bbw.cluedo.models;
 
 public class Room {
 
-    private String bezeichnung;
-    private int groesse;
-    private int anzahlTueren;
-    private int anzahlFenster;
-    private String tapetenFarbe;
-    private String bodenMuster;
+    private String name;
+    private int size;
+    private int doors;
+    private int windows;
+    private String colour;
+    private String floor;
 
-    public Room(String bezeichung, int groesse, int anzahlTueren, int anzahlFenster, String tapetenFarbe, String bodenMuster) {
-        this.bezeichnung = bezeichung;
-        this.groesse = groesse;
-        this.anzahlTueren = anzahlTueren;
-        this.anzahlFenster = anzahlFenster;
-        this.tapetenFarbe = tapetenFarbe;
-        this.bodenMuster = bodenMuster;
+    public Room(String name, int size, int doors, int windows, String colour, String floor) {
+        this.name = name;
+        this.size = size;
+        this.doors = doors;
+        this.windows = windows;
+        this.colour = colour;
+        this.floor = floor;
     }
 
-    public int getGroesse() {
-        return groesse;
+    public String getName() {
+        return name;
     }
 
-    public void setGroesse(int groesse) {
-        this.groesse = groesse;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getAnzahlTueren() {
-        return anzahlTueren;
+    public int getSize() {
+        return size;
     }
 
-    public void setAnzahlTueren(int anzahlTueren) {
-        this.anzahlTueren = anzahlTueren;
+    public void setSize(int size) {
+        this.size = size;
     }
 
-    public int getAnzahlFenster() {
-        return anzahlFenster;
+    public int getDoors() {
+        return doors;
     }
 
-    public void setAnzahlFenster(int anzahlFenster) {
-        this.anzahlFenster = anzahlFenster;
+    public void setDoors(int doors) {
+        this.doors = doors;
     }
 
-    public String getTapetenFarbe() {
-        return tapetenFarbe;
+    public int getWindows() {
+        return windows;
     }
 
-    public void setTapetenFarbe(String tapetenFarbe) {
-        this.tapetenFarbe = tapetenFarbe;
+    public void setWindows(int windows) {
+        this.windows = windows;
     }
 
-    public String getBodenMuster() {
-        return bodenMuster;
+    public String getColour() {
+        return colour;
     }
 
-    public void setBodenMuster(String bodenMuster) {
-        this.bodenMuster = bodenMuster;
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public String getFloor() {
+        return floor;
+    }
+
+    public void setFloor(String floor) {
+        this.floor = floor;
     }
 }
