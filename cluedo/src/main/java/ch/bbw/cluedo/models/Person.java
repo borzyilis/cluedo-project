@@ -7,10 +7,10 @@ public class Person {
     private String name;
     private String anrede;
     private String merkmal;
-    private Integer alter;
+    private int alter;
     private String beruf;
 
-    public Person(String name, String anrede, String merkmal, Integer alter, String beruf) {
+    public Person(String name, String anrede, String merkmal, int alter, String beruf) {
         this.name = name;
         this.anrede = anrede;
         this.merkmal = merkmal;
@@ -46,7 +46,7 @@ public class Person {
         return alter;
     }
 
-    public void setAlter(Integer alter) {
+    public void setAlter(int alter) {
         this.alter = alter;
     }
 

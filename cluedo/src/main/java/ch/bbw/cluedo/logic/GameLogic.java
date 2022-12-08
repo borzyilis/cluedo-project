@@ -36,16 +36,16 @@ public class GameLogic {
             secret.getHistory().add("None Left");
             return false;
         } else if (isSceneRight && isActorRight && isWeaponRight) {
-            secret.getHistory().add("Won");
+            secret.getHistory().add("You Won!");
             return true;
         } else if (isActorRight && isSceneRight || isActorRight && isWeaponRight || isSceneRight && isWeaponRight) {
-            secret.getHistory().add("2");
+            secret.getHistory().add("2 Are right");
             return false;
         } else if (isActorRight || isSceneRight || isWeaponRight) {
-            secret.getHistory().add("1");
+            secret.getHistory().add("1 is right");
             return false;
         } else {
-            secret.getHistory().add("0");
+            secret.getHistory().add("None is right");
             return false;
         }
 
